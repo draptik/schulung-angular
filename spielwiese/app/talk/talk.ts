@@ -1,4 +1,4 @@
-export class Talk {
+export class Talk{
     id: String;
     title: String;
     caption: String;

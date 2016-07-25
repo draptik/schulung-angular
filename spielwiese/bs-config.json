@@ -1,4 +1,3 @@
- 
 {
   "injectChanges": true,
   "files": ["./**/*.{html,htm,css,js}"],

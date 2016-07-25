@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core'
-import {Talk} from './talk'
+import {Injectable} from '@angular/core';
+import {Talk} from './talk';
 
 @Injectable()
 export class TalkService {
