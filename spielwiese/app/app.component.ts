@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {TalkService} from './talk.service';
-import {Talk} from './talk';
+import {Talk, TalkService, TalkTileComponent} from './talk/talk.providers';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app/app.component.html',
+    directives: [TalkTileComponent],
     providers: [TalkService]
 })
 export class AppComponent {
