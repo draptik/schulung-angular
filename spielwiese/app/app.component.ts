@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
+import {TalkService} from './talk.service';
+import {Talk} from './talk';
+
 @Component({
-  selector: 'my-app',
-  template: `
-  <h1>My First Angular 2 App</h1>
-  <input [(ngModel)]="data" type="text">
-    {{data}}
-  
-  <input [value]="foo" (input)="update($event.target.value)" type="text">
-    {{foo}}
-`
+    selector: 'my-app',
+    templateUrl: './app/app.component.html',
+    providers: [TalkService]
 })
 export class AppComponent {
-    data: String = 'Welt';
-    foo: String='bar';
-
-    update (value) {
-        console.log(value);
-        this.foo = value;
-    }
- }
+    constructor(private talkService: TalkService) { };
+    
+    talks = this.talkService.getTalks();
+}
